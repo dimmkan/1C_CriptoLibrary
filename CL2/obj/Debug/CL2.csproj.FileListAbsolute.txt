@@ -1,0 +1,13 @@
+C:\Documents and Settings\Fatima\Мои документы\Visual Studio 2008\Projects\CL2\CL2\bin\Debug\CL2.dll
+C:\Documents and Settings\Fatima\Мои документы\Visual Studio 2008\Projects\CL2\CL2\bin\Debug\CL2.pdb
+C:\Documents and Settings\Fatima\Мои документы\Visual Studio 2008\Projects\CL2\CL2\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Fatima\Мои документы\Visual Studio 2008\Projects\CL2\CL2\obj\Debug\CL2.dll
+C:\Documents and Settings\Fatima\Мои документы\Visual Studio 2008\Projects\CL2\CL2\obj\Debug\CL2.pdb
+C:\Documents and Settings\Fatima\Мои документы\Visual Studio 2008\Projects\CL2\CL2\bin\Debug\CL2.tlb
+C:\Users\kanaev_dv\source\repos\CL2\CL2\obj\Debug\CL2.dll
+C:\Users\kanaev_dv\source\repos\CL2\CL2\obj\Debug\CL2.pdb
+C:\Users\kanaev_dv\source\repos\CL2\CL2\obj\Debug\CL2.csprojAssemblyReference.cache
+C:\Users\kanaev_dv\source\repos\CL2\CL2\obj\Debug\CL2.csproj.CoreCompileInputs.cache
+C:\Users\kanaev_dv\source\repos\CL2\CL2\bin\Debug\CL2.dll
+C:\Users\kanaev_dv\source\repos\CL2\CL2\bin\Debug\CL2.pdb
+C:\Users\kanaev_dv\source\repos\CL2\CL2\bin\Debug\CL2.tlb
