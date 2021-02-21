@@ -11,7 +11,15 @@ namespace Crypto1CLib
 {
     public interface ASignatures
     {
-        string packingBinaryData(string sourceString);
+
+        string packingBinaryData(string sourceString, string INN);
+
+        string getCertificateSerial(string INN);
+
+        string encode64(string str);
+
+
+
     }
 
     [Guid("AB634001-F13D-11d0-A459-004095E1DAEA")]// стандартный GUID для IInitDone ссылка http://soaron.fromru.com/vkhints.htm
@@ -74,7 +82,7 @@ namespace Crypto1CLib
         {
         }
 
-        public string packingBinaryData(string sourceString)
+        public string packingBinaryData(string sourceString, string certSerialNumber)
         {
             byte[] sourceData = Convert.FromBase64String(sourceString);
             X509Certificate2[] certArr = new X509Certificate2[1];
@@ -83,7 +91,9 @@ namespace Crypto1CLib
                 store.Open(OpenFlags.ReadOnly);
                 foreach (X509Certificate2 cert in store.Certificates)
                 {
-                    certArr[0] = cert;
+                    if (cert.SerialNumber == certSerialNumber) {
+                        certArr[0] = cert;
+                    }
                 }
             }
 
@@ -95,6 +105,30 @@ namespace Crypto1CLib
 
             byte[] encodedData = signCMS.Encode();
             return Convert.ToBase64String(encodedData);
+        }
+
+        public string getCertificateSerial(string INN)
+        {
+            using (var store = new X509Store(StoreName.My, StoreLocation.CurrentUser))
+            {
+                store.Open(OpenFlags.ReadOnly);
+
+                foreach (X509Certificate2 cert in store.Certificates)
+                {
+                    if (cert.Subject.IndexOf(INN) != -1)
+                    {
+                        return cert.SerialNumber;
+                    }
+                }
+            }
+
+            return "";
+        }
+
+        public string encode64(string str)
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(str);
+            return Convert.ToBase64String(bytes);
         }
 
     }
